@@ -1,0 +1,61 @@
+.leftCircular{
+    padding: 45px;
+    margin: 10px;
+    width: 430px
+}
+
+.userDetail{
+    display: flex;
+    flex-wrap: wrap;
+    max-width:420px;
+    justify-content: space-between;
+    gap:15px;
+    margin-top:20px;
+}
+
+.rightCircular{
+    padding: 45px;
+    margin: 10px;
+    width:300px;
+}
+
+.smallCardLayout{
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    width: 200px;
+    border: 1px solid #0000ff;
+}
+
+.biggerPart{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.uploadSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    justify-content: center;
+}
+
+.smallPic{
+    width: 25px;
+    height: 25px; 
+}
+
+.outerImg{
+    background-color: rgba(225,223,255,255);
+    padding: 15px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textClass{
+    font-weight: bold;
+}

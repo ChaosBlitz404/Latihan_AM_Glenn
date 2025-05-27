@@ -1,0 +1,68 @@
+.leftSide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f8ff;
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    width:40vh;
+}
+
+.navLink{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    gap:40px;
+    width: 60%;
+    height:60vh;
+    margin-top: 100px;
+    margin-right: 50px;
+}
+
+.dashLink{
+    color:white;
+    
+}
+
+.dashboard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: blue;
+    gap:20px;
+    height:50px;
+    padding:10px;
+    border-radius: 15px;
+    width: 100%;
+    color: white;
+}
+
+.logout{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color:red;
+    gap:20px;
+    height:50px;
+    padding:10px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.logout:hover{
+    background-color: red;
+    color:white;
+    cursor: pointer;
+}
+
+.logoutLink{
+    color:red;
+}
+
+
+

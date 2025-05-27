@@ -1,0 +1,80 @@
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    min-width: 300px;
+}
+
+.approveButton{
+    background-color: #4a3aff;
+    min-width: 100px;
+    color:white;
+    font-weight: normal;
+    text-align: center;
+    padding: 10px;
+}
+
+.registerButton{
+    background-color: rgba(150,45,255,255);
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    min-width: 100px;
+    color:white;
+    font-weight: normal;
+}
+
+.bottomSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.orTxt{
+    font-size: 20px;
+}
+
+.shorterHr{
+    width:75%;
+}
+
+.biggerPart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageLogin{
+    height:420px
+}
+
+.additionalCircular{
+    padding: 45px;
+    margin: 10px;
+}
+
+.coolBorder{
+    border: 1px solid #4a3aff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginButton{
+    background-color: #0000ff;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    min-width: 100px;
+    color:white;
+    font-weight: normal;
+}
+
+
+.widthMoment{
+    width: 90%;
+}
+

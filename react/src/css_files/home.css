@@ -1,0 +1,100 @@
+.massiveTopPart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 130vh;
+    gap:20px;
+    margin-bottom: 40px;
+}
+
+.activeBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 40%;
+    padding:10px;
+}
+
+.waitingBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
+    padding:10px;
+    justify-content: space-between;
+}
+
+.boldTxt{
+    font-weight: bold;
+}
+
+.approveButton{
+    background-color: rgba(74,58,255,255);
+    min-width: 100px;
+    color:white;
+    font-weight: normal;
+    text-align: center;
+    padding: 10px;
+}
+
+.rejectButton{
+    background: linear-gradient(to right, rgb(255, 94, 98), rgb(157, 97, 255));
+    min-width: 100px;
+    color:white;
+    font-weight: normal;
+    text-align: center;
+    padding: 10px;
+}
+
+.coolTable {
+    border: 1px solid #0000ff;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+
+td, th {
+    padding: 0 40px;
+    text-align: left;
+}
+
+th{
+    text-align: left;
+}
+
+.activeInside{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+.waitingInside{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+.sectionHome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left:250px;
+}
+
+.coolLine{
+    border-bottom: 1px solid #0000ff;
+}
+
+.smallImg{
+    width:70px;
+    height: 70px;
+}
+

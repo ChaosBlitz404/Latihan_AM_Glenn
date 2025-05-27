@@ -1,0 +1,197 @@
+.shorterHr{
+    width:75%;
+}
+
+.registerForm{
+    display: flex;
+    flex-wrap: wrap;
+    max-width:430px;
+    justify-content: space-between;
+    gap:25px;
+    margin-top:20px;
+}
+
+.contactTxt{
+    text-align: left;
+    margin-bottom: 1px;
+}
+.subTxt{
+    opacity: 0.5; 
+    margin: 5px;
+    width:500px;
+    text-align: center;
+}
+
+.regisTxt{
+    margin:1px;
+}
+
+.informasiTxt{
+    text-align: left;
+    opacity: 0.5;
+    margin: 1px;
+}
+
+.topPart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nextButton{
+    background-color: rgba(74,58,255,255);
+    color:white;
+    font-weight: normal;
+    text-align: center;
+    padding: 10px 30px;
+    align-self: flex-end;
+    border:none;
+}
+
+.biggestPart{
+    display: flex;
+    flex-direction: column;
+}
+
+.additionalCircular{
+    padding: 45px;
+    margin: 10px;
+}
+
+.smallCardLayout{
+    padding:20px;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    width: 200px;
+}
+
+.fileCardLayout{
+    padding:20px;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    width: 200px;
+}
+
+.smallPic{
+    width: 25px;
+    height: 25px; 
+}
+
+.outerImg{
+    background-color: rgba(225,223,255,255);
+    padding: 15px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textClass{
+    font-weight: bold;
+}
+
+.fileSystem{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width:510px;
+    justify-content: space-between;
+    gap:15px;
+    margin-top:20px;
+
+}
+
+
+.secondStepBox{
+    padding: 45px;
+    width:510px;
+    margin: 10px;
+}
+
+.prevButton{
+    color: rgba(74,58,255,255);
+    border-color: rgba(74,58,255,255);
+    background-color: white;
+    font-weight: normal;
+    text-align: center;
+    padding: 10px 30px;
+}
+
+.bottomPrevNext{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.succesImg{
+    width: 110px;
+    height: 100px;
+    margin: 20px;
+}
+
+.succesTxt{
+    margin-bottom: 1px;
+}
+
+.subPermintaanTxt{
+    width:400px;
+    opacity: 0.5;
+}
+
+.universityClass{
+    font-weight: bold;
+    text-align: left;
+}
+
+.universityInput{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.errorMsg{
+    color:red;
+}
+
+.selectUni{
+    appearance: none; 
+    border-radius: 20px;
+    padding: 14px 9px;
+    border: 1px solid #eee;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    width: 200px;
+}
+
+
+
+.fixingTop{
+    top: 50%;
+}
+
+.fixingTop2{
+    top: 45%;
+}
+
+.relativeDiv{
+    position: relative;
+    width: 100%;
+}
+
+.spanUni{
+    position: absolute;
+    transform: translateY(-50%);
+    top:55%;
+    pointer-events: none;
+    right: 15px;
+}
+
+.fileCardLayout.uploaded {
+    border: 1px solid #007bff; 
+  }
+
+
+
+
