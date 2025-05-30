@@ -10,7 +10,7 @@ import iconPhone from '../assets/Group (1).png'
 import topBar from '../assets/Group 37318.png'
 import iconUni from '../assets/uni.png'
 
-const FirstStep = ({nextStep,formData,onChange}) => {
+const FirstStep = ({nextStep,formData,onChange,errors}) => {
 
     const [uni,setUni] = useState([]);
 
@@ -51,25 +51,32 @@ const FirstStep = ({nextStep,formData,onChange}) => {
                     <h3 className='contactTxt'>Contact</h3>
                     <p className='informasiTxt'>Masukan informasi</p>
                 <div className='registerForm'>
-                    <CircularInput name='name' section='Name' value={formData.name} placeholder='John Carter' type='text' onChange={handleInputChange} moreStyle='fixingTop' rightIcon={<img src={iconName} alt="icon" style={{ width: '18.18px', height: '22.72px' }} />}/>
-                    <CircularInput name='email' section='Email' value={formData.email} placeholder='Email address' type='email' onChange={handleInputChange} moreStyle='fixingTop' rightIcon={<img src={iconEmail} alt="icon" style={{ width: '22.72px', height: '18.18px' }} />}/>
-                    <CircularInput name='phoneNum' section='Phone Number' value={formData.phoneNum} placeholder='0888 - 456 - 7890' type='phone' onChange={handleInputChange} moreStyle='fixingTop2' rightIcon={<img src={iconPhone} alt="icon" style={{ width: '16.66px', height: '25px'}} />}/>
+                    <CircularInput name='name' section='Name' value={formData.name} placeholder='John Carter' type='text' onChange={handleInputChange} moreStyle='fixingTop' rightIcon={<img src={iconName} alt="icon" style={{ width: '18.18px', height: '22.72px' }}/>}  error = {errors.name}/>
+                    <CircularInput name='email' section='Email' value={formData.email} placeholder='Email address' type='email' onChange={handleInputChange} moreStyle='fixingTop' rightIcon={<img src={iconEmail} alt="icon" style={{ width: '22.72px', height: '18.18px' }} />} error = {errors.email}/>
+                  
+                    <CircularInput name='phoneNum' section='Phone Number' value={formData.phoneNum} placeholder='0888 - 456 - 7890' type='phone' onChange={handleInputChange} moreStyle='fixingTop2' rightIcon={<img src={iconPhone} alt="icon" style={{ width: '16.66px', height: '25px'}} />} error = {errors.phoneNum}/>
                     <div className='universityInput'>
                         <label htmlFor='university' className='universityClass'>University</label>
-                        <div className='relativeDiv'>
-                          <select className='selectUni' onChange={handleUniversityChange} value={formData.university}>
-                              <option value="">University name</option>
-                              {uni.map(university => (
-                                  <option key={university.id} value={university.id}>
-                                      {university.name}  
-                                  </option>
-                                  ))}
-                          </select>
-                          <span className='spanUni'><img src={iconUni} style={{width:'16.66px',height:'25px'}}/></span>
+                        <div className='wrapUniDiv'>
+                          <div className='relativeDiv'>
+                            <select className='selectUni' onChange={handleUniversityChange} value={formData.university}>
+                                <option value="">University name</option>
+                                {uni.map(university => (
+                                    <option key={university.id} value={university.id}>
+                                        {university.name}  
+                                    </option>
+                                    ))}
+                            </select>
+                            <span className='spanUni'><img src={iconUni} style={{width:'16.66px',height:'25px'}}/></span>
+                          </div>
+                          {errors.university && <span style={{ color: 'red' ,fontSize:11,marginTop:'5px'}}>{errors.university}</span>}
                         </div>
+                        
                     </div>
-                    <CircularInput name='password' section='Password' value={formData.password} placeholder='Password' type='password' onChange={handleInputChange}/>
-                    <CircularInput name='passwordConfirmation' section='Password Confirmation' value={formData.passwordConfirmation} placeholder='Password Confirmation' type='password' onChange={handleInputChange}/>
+                    <CircularInput name='password' section='Password' value={formData.password} placeholder='Password' type='password' onChange={handleInputChange} error={errors.password}/>
+                    
+                    <CircularInput name='passwordConfirmation' section='Password Confirmation' value={formData.passwordConfirmation} placeholder='Password Confirmation' type='password' onChange={handleInputChange} error={errors.passwordConfirmation}/>
+                    
                 </div>
         </CircularBox>
         <FancyButton section='Next Step' className='nextButton' onClick={nextStep}/>

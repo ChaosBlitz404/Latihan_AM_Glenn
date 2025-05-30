@@ -8,7 +8,9 @@ import axios from 'axios'
 const register = () => {
   const [step,setStep] = useState(1);
   const [msg, setMsg] = useState('');
+  const [errors, setErrors] = useState({});
   const navigate = useNavigate();
+  
 
   const [form,setForm] = useState({
     name: "",
@@ -41,42 +43,25 @@ const register = () => {
   },[form])
 
   const nextStepFirst = () => {
+    const newErrors = {};
 
-    let messages = [];
-    if (!form.name) {
-      messages.push('Name cannot be empty');
-    }
-    if (!form.email) {
-      messages.push('Email cannot be empty');
-    }
-    if (!form.university) {
-      messages.push('University cannot be empty');
-    }
-    if (!form.phoneNum) {
-      messages.push('Phone Number cannot be empty');
-    }
-    if (!form.password) {
-      messages.push('Password cannot be empty');
-    }
-    if (!form.passwordConfirmation) {
-      messages.push('Password Confirmation cannot be empty');
-    }
-    if (form.password && form.password.length < 6) {
-      messages.push('Password must be at least 6 characters');
-    }
-    if (form.password && form.passwordConfirmation && form.password !== form.passwordConfirmation) {
-      messages.push('Password and Password Confirmation mismatched');
-    }
+    if (!form.name) newErrors.name = 'Name cannot be empty';
+    if (!form.email) newErrors.email = 'Email cannot be empty';
+    if (!form.university) newErrors.university = 'University cannot be empty';
+    if (!form.phoneNum) newErrors.phoneNum = 'Phone Number cannot be empty';
+    if (!form.password) newErrors.password = 'Password cannot be empty';
+    if (!form.passwordConfirmation) newErrors.passwordConfirmation = 'Password Confirmation cannot be empty';
+    if (form.password && form.password.length < 6) newErrors.password = 'Password must be at least 6 characters';
+    if (form.password && form.passwordConfirmation && form.password !== form.passwordConfirmation)
+      newErrors.passwordConfirmation = 'Password and confirmation do not match';
 
-    setMsg(messages.join('<br />'));
+    setErrors(newErrors);
 
-    if(messages.length === 0)
-    {
-      setStep(prev => prev + 1)
+    if (Object.keys(newErrors).length === 0) {
+      setStep(prev => prev + 1);
     }
-
-
   };
+
   const prevStep = () => setStep(prev => prev - 1);
   const nextStepSubmit = async () => {
     try {
@@ -119,7 +104,7 @@ const register = () => {
   const renderStep = () => {
     switch(step) {
       case 1 :
-        return <FirstStep formData={form} onChange={handleFormChange} nextStep={nextStepFirst}/>
+        return <FirstStep formData={form} onChange={handleFormChange} nextStep={nextStepFirst} errors={errors}/>
       case 2 :
         return <SecondStep formData={form} onChange={handleFormChange} nextStep={nextStepSubmit} prevStep={prevStep} setMsg={setMsg}/>
       case 3 :

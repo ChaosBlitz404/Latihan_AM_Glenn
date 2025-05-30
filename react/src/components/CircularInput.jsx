@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CircularInput = ({name,placeholder,type,labelClass,section,inputClass,value,onChange,rightIcon,moreStyle}) => {
+const CircularInput = ({name,placeholder,type,labelClass,section,inputClass,value,onChange,rightIcon,moreStyle,error}) => {
     const defaultInputStyle = {
         borderRadius: '20px',
         padding:'14px 16px',
@@ -31,16 +31,28 @@ const CircularInput = ({name,placeholder,type,labelClass,section,inputClass,valu
 
     const inputWrapperStyle = {
       position: 'relative',
-      width: '100%'
+      width: '100%',
+      marginBottom:'0'
+    };
+
+    const anotherStyle = {
+      display:'flex',
+      flexDirection:'column',
+      alignItems:'flex-start',
+      gap:'0'
     };
 
   return (
     <div style={entireStyle}>
         <label htmlFor={name} style={defaultLabelStyle} className={labelClass}>{section}</label>
-        <div style={inputWrapperStyle}>
-          <input type={type} name={name} placeholder={placeholder} value={value} onChange={onChange} style={defaultInputStyle} className={inputClass}/>
-          {rightIcon && <span style={iconStyle} className={moreStyle}>{rightIcon}</span>}
+        <div style={anotherStyle}>
+          <div style={inputWrapperStyle}>
+            <input type={type} name={name} placeholder={placeholder} value={value} onChange={onChange} style={defaultInputStyle} className={inputClass}/>
+            {rightIcon && <span style={iconStyle} className={moreStyle}>{rightIcon}</span>}
+          </div>
+          {error && <span style={{ color: 'red',fontSize: 11,marginTop:'5px' }}>{error}</span>}
         </div>
+        
     </div>
   )
 }
